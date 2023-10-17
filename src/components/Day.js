@@ -6,6 +6,7 @@ function Day(props) {
     return (
         <div className="col border p-3">
             <h4>{props.dayName}</h4>
+            <NewTaskForm />
             {props.tasks.map(task => (
                 <Task
                     key={task.id}
@@ -15,7 +16,7 @@ function Day(props) {
                     endTime={task.endTime}
                 />
             ))}
-            <NewTaskForm />
+
         </div>
     );
 }
